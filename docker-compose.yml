@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  ffc1:
+    image: ffc
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8000:8000
+  ffc2:
+    image: ffc
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8001:8000
