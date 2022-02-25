@@ -6,6 +6,9 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    environment:
+      - STORE_ID=1
+      - ENV=development
     ports:
       - 8000:8000
   ffc2:
@@ -13,5 +16,18 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    environment:
+      - STORE_ID=2
+      - ENV=development
     ports:
       - 8001:8000
+  ffc3:
+    image: ffc
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - STORE_ID=3
+      - ENV=production
+    ports:
+      - 8002:8000
