@@ -6,6 +6,10 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    environment:
+      - UNLEASH_TOKEN=*:development.d56391087331c6b8909cb9165e27f549f38f00697beb2f9e5b0fdbcc  
+      - STORE_ID=1
+      - ENV=development
     ports:
       - 8000:8000
   ffc2:
@@ -13,5 +17,20 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    environment:
+      - UNLEASH_TOKEN=*:development.d56391087331c6b8909cb9165e27f549f38f00697beb2f9e5b0fdbcc
+      - STORE_ID=2
+      - ENV=development
     ports:
       - 8001:8000
+  ffc3:
+    image: ffc
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - UNLEASH_TOKEN=*:production.35684be776fc0acf1dd887c80cfa22058b0f688e21810290abbc6d9d
+      - STORE_ID=3
+      - ENV=production
+    ports:
+      - 8002:8000
