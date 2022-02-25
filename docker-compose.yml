@@ -7,6 +7,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     environment:
+      - SDK_KEY=sdk-d153ce08-8c7c-4297-9c51-878e7d55b941
       - STORE_ID=1
       - ENV=development
     ports:
@@ -17,8 +18,9 @@ services:
       context: .
       dockerfile: ./Dockerfile
     environment:
+      - SDK_KEY=sdk-69da3739-0241-4774-8fe4-ec9340277139
       - STORE_ID=2
-      - ENV=development
+      - ENV=production
     ports:
       - 8001:8000
   ffc3:
@@ -27,6 +29,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     environment:
+      - SDK_KEY=sdk-69da3739-0241-4774-8fe4-ec9340277139
       - STORE_ID=3
       - ENV=production
     ports:

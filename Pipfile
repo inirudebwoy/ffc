@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 fastapi = "*"
 uvicorn = "*"
+launchdarkly-server-sdk = "*"
 
 [dev-packages]
 
